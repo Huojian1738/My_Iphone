@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无敌风火轮 - 一键下载</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+            padding: 20px;
+        }
+        .download-card {
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+            padding: 50px 35px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+        }
+        .icon-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+            border-radius: 24px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .icon-box svg {
+            width: 50px;
+            height: 50px;
+            fill: white;
+        }
+        h1 {
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+            color: white;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(238, 9, 121, 0.4);
+        }
+        .download-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(238, 9, 121, 0.6);
+        }
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        .tip {
+            margin-top: 35px;
+            font-size: 13px;
+            color: #999;
+            line-height: 1.5;
+        }
+        .divider {
+            margin: 30px 0;
+            height: 1px;
+            background: #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="download-card">
+        <div class="icon-box">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+        </div>
+        <h1>🔥 无敌风火轮 🔥</h1>
+        <p class="subtitle">点击下方按钮，一键下载安装包<br>安全无广告，放心安装</p >
+        
+        <!-- 核心下载按钮：直接触发下载，自动重命名为 无敌风火轮.apk -->
+        <a href=" " 
+           class="download-btn" 
+           download="无敌风火轮.apk">
+            立即下载
+        </a >
+
+        <div class="divider"></div>
+        <p class="tip">💡 提示：若下载无响应，请检查网络或稍后重试<br>安卓设备安装时请允许「安装未知来源应用」权限</p >
+    </div>
+</body>
+</html>
