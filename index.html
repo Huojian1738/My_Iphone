@@ -57,7 +57,7 @@
         .subtitle {
             color: #666;
             font-size: 16px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             line-height: 1.6;
         }
         .download-btn {
@@ -71,6 +71,8 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 6px 20px rgba(238, 9, 121, 0.4);
+            border: none;
+            cursor: pointer;
         }
         .download-btn:hover {
             transform: translateY(-4px);
@@ -84,6 +86,14 @@
             font-size: 13px;
             color: #999;
             line-height: 1.5;
+        }
+        .mobile-tip {
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff3e0;
+            border-radius: 12px;
+            color: #e65100;
+            font-size: 14px;
         }
         .divider {
             margin: 30px 0;
@@ -102,15 +112,34 @@
         <h1>🔥 无敌风火轮 🔥</h1>
         <p class="subtitle">点击下方按钮，一键下载安装包<br>安全无广告，放心安装</p >
         
-        <!-- 核心下载按钮：直接触发下载，自动重命名为 无敌风火轮.apk -->
-        <a href=" " 
-           class="download-btn" 
-           download="无敌风火轮.apk">
+        <!-- 改用JS触发下载，兼容手机浏览器 -->
+        <button class="download-btn" onclick="downloadApk()">
             立即下载
-        </a >
+        </button>
+
+        <div class="mobile-tip">
+            提示：若在微信/QQ里无法下载，请点击右上角「...」，选择「在浏览器中打开」
+        </div>
 
         <div class="divider"></div>
-        <p class="tip">💡 提示：若下载无响应，请检查网络或稍后重试<br>安卓设备安装时请允许「安装未知来源应用」权限</p >
+        <p class="tip">💡 安卓安装时请允许「安装未知来源应用」权限<br>iOS设备需使用TestFlight或自签名安装</p >
     </div>
+
+    <script>
+        function downloadApk() {
+            // 定义文件信息
+            const fileUrl = "https://huojian1738.github.io/My_Iphone/无风火轮二.apk";
+            const fileName = "无敌风火轮.apk";
+
+            // 动态创建a标签，触发下载
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+            link.target = '_blank'; // 兼容部分浏览器
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
